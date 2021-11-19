@@ -1,0 +1,261 @@
+<html>
+
+<head>
+  <title>Makeza</title>
+  
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale =1">
+</head>
+
+<body>
+  <section id="banner">
+    <!-- <a href="#"><img src="" class="logo"></a> -->
+
+
+    <div class="banner-text">
+      
+      <h1>SPACE TRIP</h1>
+      <p>It's Time To Explore</p>
+      <div class="banner-btn">
+        <a href=""><span></span>Apply Now </a>
+        <a href="#"><span></span>More About Us</a>
+      </div>
+    </div>
+
+
+   </section>
+
+  <!-- about us -->
+  <section class="about" id="about">
+    <div class="max-width">
+       <h2 class="title">ABOUT US</h2>
+       <div class="about-content">
+          <div class="column left">
+             <img src="" alt="">
+          </div>
+          <div class="column right">
+             <div class="text"><span>SPACE TRIP</span>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                   when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                   It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                   essentially unchanged.
+                   It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                   and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                   Ipsum.</p>
+                <a href="/Service"><i class="far fa-rocket"></i>&nbsp;Read More</a>
+             </div>
+          </div>
+       </div>
+    </div>
+ 
+    </section>
+
+  <!-- ----form---- -->
+  <div class="card m-3">
+    <h5 class="card-header">Angular 10 Reactive Form Validation</h5>
+    <div class="card-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <!-- <div class="form-group col">
+                <label>Title</label>
+                <select formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                    <option value=""></option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Ms">Ms</option>
+                </select>
+                <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                    <div *ngIf="f.title.errors.required">Title is required</div>
+                </div>
+            </div> -->
+                <div class="form-group col-5">
+                    <label>First Name</label>
+                    <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group col-5">
+                    <label>Last Name</label>
+                    <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label>Date of Birth</label>
+                    <input type="date" formControlName="dob" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" />
+                    <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
+                        <div *ngIf="f.dob.errors.required">Date of Birth is required</div>
+                        <div *ngIf="f.dob.errors.pattern">Date of Birth must be a valid date in the format YYYY-MM-DD</div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label>Email</label>
+                    <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label>Phone No</label>
+                    <input type="number" formControlName="phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+                    <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                        <div *ngIf="f.phone.errors.required">number is required</div>
+                        <div *ngIf="f.phone.errors.minlength">Phone No must be 10 characters</div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label>Pincode</label>
+                    <input type="number" formControlName="code" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.code.errors }" />
+                    <div *ngIf="submitted && f.code.errors" class="invalid-feedback">
+                        <div *ngIf="f.code.errors.required"> Pincode is required</div>
+                        <!-- <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col">
+                  <label>Blood Group</label>
+                  <input type="text" formControlName="blood" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.blood.errors }" />
+                  <div *ngIf="submitted && f.blood.errors" class="invalid-feedback">
+                      <div *ngIf="f.blood.errors.required">Blood Group is required</div>
+                      <!-- <div *ngIf="f.dob.errors.pattern">Date of Birth must be a valid date in the format YYYY-MM-DD</div> -->
+                  </div>
+              </div>
+              <div class="form-group col">
+                <label>Trip Year</label>
+                <select formControlName="trip" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.trip.errors }">
+                    <option value="">Select Year</option>
+                    <option value="2025">2025</option>
+                    <option value="2027">2027</option>
+                    <option value="2029">2029</option>
+                    <option value="2031">2031</option>
+                </select>
+                <div *ngIf="submitted && f.trip.errors" class="invalid-feedback">
+                    <div *ngIf="f.trip.errors.required">Trip Year is required</div>
+                </div>
+              </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col">
+              <label>Sugar</label>
+              <select formControlName="sugar" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.sugar.errors }">
+                  <option value=""></option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                 
+              </select>
+              <div *ngIf="submitted && f.sugar.errors" class="invalid-feedback">
+                  <div *ngIf="f.sugar.errors.required">Details is required</div>
+              </div>
+            </div>
+            <div class="form-group col">
+              <label>BP</label>
+              <select formControlName="bp" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.bp.errors }">
+                  <option value=""></option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                  
+              </select>
+              <div *ngIf="submitted && f.bp.errors" class="invalid-feedback">
+                  <div *ngIf="f.bp.errors.required">Details is required</div>
+              </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col">
+            <label>Heart Disease</label>
+            <select formControlName="heart" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.heart.errors }">
+                <option value=""></option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+               
+            </select>
+            <div *ngIf="submitted && f.heart.errors" class="invalid-feedback">
+                <div *ngIf="f.heart.errors.required">Details is required</div>
+            </div>
+          </div>
+          <div class="form-group col">
+            <label>Respiratory Disease</label>
+            <select formControlName="respiratory" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.respiratory.errors }">
+                <option value=""></option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                
+            </select>
+            <div *ngIf="submitted && f.respiratory.errors" class="invalid-feedback">
+                <div *ngIf="f.respiratory.errors.required">Details is required</div>
+            </div>
+          </div>
+      </div>
+
+            <div class="form-group form-check">
+                <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
+                <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+                <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary mr-1">Save</button>
+                
+            </div>
+        </form>
+        <button class="btn btn-secondary" type="button" (click)="fun()">Submit</button>
+        
+    </div>
+</div>
+  
+
+  
+
+ 
+
+    <!-----------footer Area----------->
+
+<footer>
+  <div class="row">
+    <div class="col">
+      <img src="images/adv6.jpg" class="logo1">
+      <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+        Ipsum.</p>
+    </div>
+    <div class="col">
+      <h3>Office<div class="underline"><span></span></div></h3>
+      <p>IPL Road</p>
+      <p>whitefield, Banglore</p>
+      <p>Karnataka, PIN 660066, India</p>
+      <p class="email-id">spacetrip@gmail.com</p>
+      <h4>+91-9876543210</h4>
+    </div>
+   
+    <div class="col">
+      <h3>Newsletter<div class="underline"><span></span></div></h3>
+      <form>
+        <i class="far fa-envelope"></i>
+        <input type="email" placeholder="Enter your email id" required>
+        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+      </form>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-pinterest"></i>
+      </div>
+    </div>
+   </div>
+  
+</footer>
