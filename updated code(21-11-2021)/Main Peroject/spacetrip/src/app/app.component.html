@@ -1,0 +1,132 @@
+<html>
+
+<head>
+  <title>Space Trip</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+
+</head>
+
+<body>
+  <section id="banner">
+    <!-- <a href="#"><img src="" class="logo"></a> -->
+
+
+    <div class="banner-text">
+
+      <h1>SPACE TRIP</h1>
+      <p>It's Time To Explore</p>
+      <div class="banner-btn">
+        <a href="#mey"><span></span>Apply Now </a>
+
+
+        <a href="#viewreport"><span></span>View Report</a>
+
+        <!-- {{record|json}} -->
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- about us -->
+  <section class="about" id="about">
+    <div class="max-width">
+      <h2 class="title">ABOUT US</h2>
+      <div class="about-content">
+        <div class="column left">
+          <img src="../assets/images/space_tourist.jpg" alt="">
+        </div>
+        <div class="column right">
+          <div class="text"><span>SPACE TRIP</span>
+            <p>Earth has close to 8 billion people and fewer than 600 people have been lucky enough to wake up outside
+              of Earth’s atmosphere. In 2001, Space Adventures opened the door for private citizens to explore space – a
+              destination that holds the future for humanity – and we can do the same for you..We don’t build rockets.
+              We don’t build spacecraft. We work with those who do to create unique opportunities for our clients to
+              launch to space for multi-day missions.</p>
+            <a href="/Service"><i class="far fa-rocket"></i>&nbsp;Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <app-form id="mey"></app-form>
+
+
+
+
+  <section id="viewreport" style= "margin-top:900px;" class="container">
+    <h2 class="title text-center">REPORT</h2>
+    <table class="table">
+      <thead class="thead">
+        <tr>
+          <th  scope="col">Req No</th>
+          <th scope="col">FirstName</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Pincode</th>
+          <th scope="col">Trip Year</th>
+          <th scope="col">Blood Group</th>
+          <th scope="col">Sugar</th>
+          <th scope="col">Heart Issues</th>
+          <th scope="col">Respiratory Issues</th>
+
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let rep of record">
+          <th>{{rep.ReqNo}}</th>
+          <td>{{rep.firstName}}</td>
+          <td>{{rep.lastName}}</td>
+          <td>{{rep.email}}</td>
+          <td>{{rep.code}}</td>
+          <td>{{rep.trip}}</td>
+          <td>{{rep.blood}}</td>
+          <td>{{rep.sugar}}</td>
+          <td>{{rep.heart}}</td>
+          <td>{{rep.respiratory}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-----------footer Area----------->
+
+  <footer>
+    <div class="row">
+      <div class="col">
+        <img src="../assets/images/adv6.jpg" class="logo1">
+        <h3>SPACE TRIP<div class="underline"><span></span></div>
+        </h3>
+      </div>
+      <div class="col">
+        <h3>Office<div class="underline"><span></span></div>
+        </h3>
+        <p>IPL Road</p>
+        <p>Anna Nagar, Chennai</p>
+        <p>TamilNadu, PIN 660066, India</p>
+        <p class="email-id">spacetrip@gmail.com</p>
+        <h4>+91-9876543210</h4>
+      </div>
+
+      <div class="col">
+        <h3>Newsletter<div class="underline"><span></span></div>
+        </h3>
+        <form>
+          <i class="far fa-envelope"></i>
+          <input type="email" placeholder="Enter your email id" required>
+          <button type="submit"><i class="fas fa-arrow-right"></i></button>
+        </form>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-pinterest"></i>
+        </div>
+      </div>
+    </div>
+
+  </footer>
